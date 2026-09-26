@@ -1,23 +1,62 @@
 aid: aquafibertechnologies
+
 name: Aquafibertechnologies
-description: 'Aquafibertechnologies is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aquafibertechnologies is a technology company focused on developing advanced fiber solutions for water treatment, infrastructure, and sustainability applications. The firm appears in multiple business intelligence sources such as EquityZen, Crunchbase, and social media profiles, indicating activity in the fiber technology sector. While a dedicated corporate website was not located, the company is referenced across industry listings, suggesting a presence in the market for innovative fiber-based products and services.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aquafibertechnologies/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Fiber
+- WaterTreatment
+- Sustainability
+- Technology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/aquafibertechnologies
+
+
+  - type: Hosts
+    url: hosts/aquafibertechnologies-hosts.yml
+  - type: Vendors
+    url: vendors/aquafibertechnologies-vendors.yml
+  - type: DomainSecurity
+    url: security/aquafibertechnologies-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/aquafibertechnologies
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The company website http://aquafiber.com returns a JavaScript shell, preventing machine-readable extraction.
+  evidence:
+    - url: http://aquafiber.com
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
